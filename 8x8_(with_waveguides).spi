@@ -1,0 +1,535 @@
+*
+* MAIN CELL: Component pathname : root_element
+*
+   .MODEL BDC_switch_ideal "label 1"="TE" "control"=1
+   .MODEL "Waveguide Crossing" "label 1"="TE" "transmission 1"=0.9954054174 "cross talk 1"=0.0001
+   + "transmission 2"=1 "cross talk 2"=0 "reflection 1"=0.001
+   + "reflection 2"=0 "label 2"="TM" "orthogonal identifier 1"=1
+   + "orthogonal identifier 2"=2
+   .MODEL "Straight Waveguide" "excess loss temperature sensitivity 2"=0 "label 1"="TE" "orthogonal identifier 1"=1 
+   + "loss 1"=0 "number of taps"=64 "dispersion 1"=0 
+   + "effective index temperature sensitivity 2"=0 "effective index 2"=1 length=10u 
+   + "group index 2"=1 "orthogonal identifier 2"=2 "nominal temperature"=300 
+   + "loss 2"=0 "dispersion 2"=0 frequency=193.1T 
+   + "digital filter"=0 "run diagnostic"=0 "window function"="rectangular" 
+   + "thermal fill factor"=1 "excess loss temperature sensitivity 1"=0 "label 2"="TM" 
+   + "thermal effects"=0 "effective index temperature sensitivity 1"=0 "effective index 1"=1 
+
+.subckt HDBE  N$641 N$643 N$645 N$647 N$649 N$651 N$653 N$655 N$689 N$691 N$693 N$695 N$697 N$699 N$701 N$703
+   S105 N$641 N$642 N$493 N$354 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S106 N$643 N$644 N$356 N$358 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S107 N$645 N$646 N$360 N$362 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S108 N$647 N$648 N$364 N$366 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S109 N$649 N$650 N$368 N$370 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S110 N$651 N$652 N$372 N$374 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S111 N$653 N$654 N$376 N$378 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S112 N$655 N$656 N$380 N$495 BDC_switch_ideal library="Design kits/capstone" sch_x=-30 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C113 N$353 N$355 N$465 N$382 "Waveguide Crossing" sch_x=-28 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C114 N$357 N$359 N$384 N$386 "Waveguide Crossing" sch_x=-28 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C115 N$361 N$363 N$388 N$390 "Waveguide Crossing" sch_x=-28 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C116 N$365 N$367 N$392 N$394 "Waveguide Crossing" sch_x=-28 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C117 N$369 N$371 N$396 N$398 "Waveguide Crossing" sch_x=-28 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C118 N$373 N$375 N$400 N$402 "Waveguide Crossing" sch_x=-28 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C119 N$377 N$379 N$404 N$491 "Waveguide Crossing" sch_x=-28 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C120 N$381 N$383 N$467 N$406 "Waveguide Crossing" sch_x=-26 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C121 N$385 N$387 N$408 N$410 "Waveguide Crossing" sch_x=-26 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C122 N$389 N$391 N$412 N$414 "Waveguide Crossing" sch_x=-26 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C123 N$393 N$395 N$416 N$418 "Waveguide Crossing" sch_x=-26 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C124 N$397 N$399 N$420 N$422 "Waveguide Crossing" sch_x=-26 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C125 N$401 N$403 N$424 N$489 "Waveguide Crossing" sch_x=-26 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C126 N$405 N$407 N$469 N$426 "Waveguide Crossing" sch_x=-24 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C127 N$409 N$411 N$428 N$430 "Waveguide Crossing" sch_x=-24 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C128 N$413 N$415 N$432 N$434 "Waveguide Crossing" sch_x=-24 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C129 N$417 N$419 N$436 N$438 "Waveguide Crossing" sch_x=-24 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C130 N$421 N$423 N$440 N$487 "Waveguide Crossing" sch_x=-24 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C131 N$425 N$427 N$471 N$442 "Waveguide Crossing" sch_x=-22 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C132 N$429 N$431 N$444 N$446 "Waveguide Crossing" sch_x=-22 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C133 N$433 N$435 N$448 N$450 "Waveguide Crossing" sch_x=-22 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C134 N$437 N$439 N$452 N$485 "Waveguide Crossing" sch_x=-22 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C135 N$441 N$443 N$473 N$454 "Waveguide Crossing" sch_x=-20 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C136 N$445 N$447 N$456 N$458 "Waveguide Crossing" sch_x=-20 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C137 N$449 N$451 N$460 N$483 "Waveguide Crossing" sch_x=-20 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C138 N$453 N$455 N$475 N$462 "Waveguide Crossing" sch_x=-18 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C139 N$457 N$459 N$464 N$481 "Waveguide Crossing" sch_x=-18 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C140 N$461 N$463 N$477 N$479 "Waveguide Crossing" sch_x=-16 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S85 N$480 N$482 N$309 N$274 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S86 N$484 N$486 N$276 N$278 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S87 N$488 N$490 N$280 N$282 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S88 N$492 N$496 N$284 N$311 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C89 N$273 N$275 N$297 N$286 "Waveguide Crossing" sch_x=-12 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C90 N$277 N$279 N$288 N$290 "Waveguide Crossing" sch_x=-12 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C91 N$281 N$283 N$292 N$307 "Waveguide Crossing" sch_x=-12 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C92 N$285 N$287 N$299 N$294 "Waveguide Crossing" sch_x=-10 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C93 N$289 N$291 N$296 N$305 "Waveguide Crossing" sch_x=-10 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C94 N$293 N$295 N$301 N$303 "Waveguide Crossing" sch_x=-8 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S33 N$494 N$466 N$133 N$98 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S34 N$468 N$470 N$100 N$102 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S35 N$472 N$474 N$104 N$106 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S36 N$476 N$478 N$108 N$135 BDC_switch_ideal library="Design kits/capstone" sch_x=-14 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C37 N$97 N$99 N$121 N$110 "Waveguide Crossing" sch_x=-12 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C38 N$101 N$103 N$112 N$114 "Waveguide Crossing" sch_x=-12 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C39 N$105 N$107 N$116 N$131 "Waveguide Crossing" sch_x=-12 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C40 N$109 N$111 N$123 N$118 "Waveguide Crossing" sch_x=-10 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C41 N$113 N$115 N$120 N$129 "Waveguide Crossing" sch_x=-10 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C42 N$117 N$119 N$125 N$127 "Waveguide Crossing" sch_x=-8 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S1 N$134 N$122 N$1 N$3 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S2 N$124 N$126 N$5 N$11 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S3 N$657 N$2 N$13 N$15 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S4 N$8 N$658 N$17 N$23 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S5 N$659 N$10 N$25 N$27 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S6 N$12 N$660 N$29 N$35 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S7 N$14 N$22 N$37 N$661 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S8 N$20 N$24 N$662 N$39 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S9 N$26 N$34 N$41 N$663 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S10 N$32 N$36 N$664 N$47 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S11 N$38 N$46 N$174 N$162 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S12 N$44 N$48 N$164 N$166 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C13 N$4 N$6 N$7 N$9 "Waveguide Crossing" sch_x=-4 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C14 N$16 N$18 N$21 N$19 "Waveguide Crossing" sch_x=0 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C15 N$28 N$30 N$33 N$31 "Waveguide Crossing" sch_x=0 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C16 N$40 N$42 N$45 N$43 "Waveguide Crossing" sch_x=4 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S17 N$128 N$130 N$49 N$51 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S18 N$132 N$136 N$53 N$59 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S19 N$665 N$50 N$61 N$63 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S20 N$56 N$666 N$65 N$71 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S21 N$667 N$58 N$73 N$75 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S22 N$60 N$668 N$77 N$83 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S23 N$62 N$70 N$85 N$669 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S24 N$68 N$72 N$670 N$87 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S25 N$74 N$82 N$89 N$671 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S26 N$80 N$84 N$672 N$95 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S27 N$86 N$94 N$168 N$170 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S28 N$92 N$96 N$172 N$176 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C29 N$52 N$54 N$55 N$57 "Waveguide Crossing" sch_x=-4 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C30 N$64 N$66 N$69 N$67 "Waveguide Crossing" sch_x=0 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C31 N$76 N$78 N$81 N$79 "Waveguide Crossing" sch_x=0 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C32 N$88 N$90 N$93 N$91 "Waveguide Crossing" sch_x=4 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C47 N$161 N$150 N$137 N$139 "Waveguide Crossing" sch_x=12 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C48 N$152 N$154 N$141 N$143 "Waveguide Crossing" sch_x=12 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C49 N$156 N$171 N$145 N$147 "Waveguide Crossing" sch_x=12 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C50 N$163 N$158 N$149 N$151 "Waveguide Crossing" sch_x=10 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C51 N$160 N$169 N$153 N$155 "Waveguide Crossing" sch_x=10 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C52 N$165 N$167 N$157 N$159 "Waveguide Crossing" sch_x=8 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S43 N$173 N$138 N$638 N$610 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S44 N$140 N$142 N$612 N$614 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S45 N$144 N$146 N$616 N$618 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S46 N$148 N$175 N$620 N$622 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S53 N$310 N$298 N$177 N$179 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=-1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S54 N$300 N$302 N$181 N$187 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=-2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S55 N$673 N$178 N$189 N$191 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S56 N$184 N$674 N$193 N$199 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S57 N$675 N$186 N$201 N$203 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S58 N$188 N$676 N$205 N$211 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S59 N$190 N$198 N$213 N$677 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S60 N$196 N$200 N$678 N$215 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S61 N$202 N$210 N$217 N$679 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S62 N$208 N$212 N$680 N$223 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S63 N$214 N$222 N$350 N$338 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=-1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S64 N$220 N$224 N$340 N$342 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=-2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C65 N$180 N$182 N$183 N$185 "Waveguide Crossing" sch_x=-4 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C66 N$192 N$194 N$197 N$195 "Waveguide Crossing" sch_x=0 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C67 N$204 N$206 N$209 N$207 "Waveguide Crossing" sch_x=0 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C68 N$216 N$218 N$221 N$219 "Waveguide Crossing" sch_x=4 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S69 N$304 N$306 N$225 N$227 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=-5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S70 N$308 N$312 N$229 N$235 BDC_switch_ideal library="Design kits/capstone" sch_x=-6 sch_y=-6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S71 N$681 N$226 N$237 N$239 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S72 N$232 N$682 N$241 N$247 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S73 N$683 N$234 N$249 N$251 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S74 N$236 N$684 N$253 N$259 BDC_switch_ideal library="Design kits/capstone" sch_x=-2 sch_y=-7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S75 N$238 N$246 N$261 N$685 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S76 N$244 N$248 N$686 N$263 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S77 N$250 N$258 N$265 N$687 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S78 N$256 N$260 N$688 N$271 BDC_switch_ideal library="Design kits/capstone" sch_x=2 sch_y=-7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S79 N$262 N$270 N$344 N$346 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=-5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S80 N$268 N$272 N$348 N$352 BDC_switch_ideal library="Design kits/capstone" sch_x=6 sch_y=-6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C81 N$228 N$230 N$231 N$233 "Waveguide Crossing" sch_x=-4 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C82 N$240 N$242 N$245 N$243 "Waveguide Crossing" sch_x=0 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C83 N$252 N$254 N$257 N$255 "Waveguide Crossing" sch_x=0 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C84 N$264 N$266 N$269 N$267 "Waveguide Crossing" sch_x=4 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C99 N$337 N$326 N$313 N$315 "Waveguide Crossing" sch_x=12 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C100 N$328 N$330 N$317 N$319 "Waveguide Crossing" sch_x=12 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C101 N$332 N$347 N$321 N$323 "Waveguide Crossing" sch_x=12 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C102 N$339 N$334 N$325 N$327 "Waveguide Crossing" sch_x=10 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C103 N$336 N$345 N$329 N$331 "Waveguide Crossing" sch_x=10 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C104 N$341 N$343 N$333 N$335 "Waveguide Crossing" sch_x=8 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S95 N$349 N$314 N$624 N$626 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S96 N$316 N$318 N$628 N$630 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S97 N$320 N$322 N$632 N$634 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S98 N$324 N$351 N$636 N$640 BDC_switch_ideal library="Design kits/capstone" sch_x=14 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C149 N$609 N$526 N$497 N$499 "Waveguide Crossing" sch_x=28 sch_y=6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C150 N$528 N$530 N$501 N$503 "Waveguide Crossing" sch_x=28 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C151 N$532 N$534 N$505 N$507 "Waveguide Crossing" sch_x=28 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C152 N$536 N$538 N$509 N$511 "Waveguide Crossing" sch_x=28 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C153 N$540 N$542 N$513 N$515 "Waveguide Crossing" sch_x=28 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C154 N$544 N$546 N$517 N$519 "Waveguide Crossing" sch_x=28 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C155 N$548 N$635 N$521 N$523 "Waveguide Crossing" sch_x=28 sch_y=-6 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C156 N$611 N$550 N$525 N$527 "Waveguide Crossing" sch_x=26 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C157 N$552 N$554 N$529 N$531 "Waveguide Crossing" sch_x=26 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C158 N$556 N$558 N$533 N$535 "Waveguide Crossing" sch_x=26 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C159 N$560 N$562 N$537 N$539 "Waveguide Crossing" sch_x=26 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C160 N$564 N$566 N$541 N$543 "Waveguide Crossing" sch_x=26 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C161 N$568 N$633 N$545 N$547 "Waveguide Crossing" sch_x=26 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C162 N$613 N$570 N$549 N$551 "Waveguide Crossing" sch_x=24 sch_y=4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C163 N$572 N$574 N$553 N$555 "Waveguide Crossing" sch_x=24 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C164 N$576 N$578 N$557 N$559 "Waveguide Crossing" sch_x=24 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C165 N$580 N$582 N$561 N$563 "Waveguide Crossing" sch_x=24 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C166 N$584 N$631 N$565 N$567 "Waveguide Crossing" sch_x=24 sch_y=-4 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C167 N$615 N$586 N$569 N$571 "Waveguide Crossing" sch_x=22 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C168 N$588 N$590 N$573 N$575 "Waveguide Crossing" sch_x=22 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C169 N$592 N$594 N$577 N$579 "Waveguide Crossing" sch_x=22 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C170 N$596 N$629 N$581 N$583 "Waveguide Crossing" sch_x=22 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C171 N$617 N$598 N$585 N$587 "Waveguide Crossing" sch_x=20 sch_y=2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C172 N$600 N$602 N$589 N$591 "Waveguide Crossing" sch_x=20 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C173 N$604 N$627 N$593 N$595 "Waveguide Crossing" sch_x=20 sch_y=-2 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C174 N$619 N$606 N$597 N$599 "Waveguide Crossing" sch_x=18 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C175 N$608 N$625 N$601 N$603 "Waveguide Crossing" sch_x=18 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   C176 N$621 N$623 N$605 N$607 "Waveguide Crossing" sch_x=16 sch_y=0 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S141 N$637 N$498 N$689 N$690 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S142 N$500 N$502 N$691 N$692 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S143 N$504 N$506 N$693 N$694 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S144 N$508 N$510 N$695 N$696 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S145 N$512 N$514 N$697 N$698 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S146 N$516 N$518 N$699 N$700 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S147 N$520 N$522 N$701 N$702 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   S148 N$524 N$639 N$703 N$704 BDC_switch_ideal library="Design kits/capstone" sch_x=30 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W1 N$1 N$2 "Straight Waveguide" sch_x=-4 sch_y=7.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W2 N$3 N$4 "Straight Waveguide" sch_x=-5 sch_y=6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W3 N$5 N$6 "Straight Waveguide" sch_x=-5 sch_y=5.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W4 N$7 N$8 "Straight Waveguide" sch_x=-3 sch_y=6.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W5 N$9 N$10 "Straight Waveguide" sch_x=-3 sch_y=5.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W6 N$11 N$12 "Straight Waveguide" sch_x=-4 sch_y=4.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W7 N$13 N$14 "Straight Waveguide" sch_x=0 sch_y=7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W8 N$15 N$16 "Straight Waveguide" sch_x=-1 sch_y=7.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W9 N$17 N$18 "Straight Waveguide" sch_x=-1 sch_y=6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W10 N$19 N$20 "Straight Waveguide" sch_x=1 sch_y=6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W11 N$21 N$22 "Straight Waveguide" sch_x=1 sch_y=7.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W12 N$23 N$24 "Straight Waveguide" sch_x=0 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W13 N$25 N$26 "Straight Waveguide" sch_x=0 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W14 N$27 N$28 "Straight Waveguide" sch_x=-1 sch_y=5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W15 N$29 N$30 "Straight Waveguide" sch_x=-1 sch_y=4.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W16 N$31 N$32 "Straight Waveguide" sch_x=1 sch_y=4.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W17 N$33 N$34 "Straight Waveguide" sch_x=1 sch_y=5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W18 N$35 N$36 "Straight Waveguide" sch_x=0 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W19 N$37 N$38 "Straight Waveguide" sch_x=4 sch_y=7.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W20 N$39 N$40 "Straight Waveguide" sch_x=3 sch_y=6.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W21 N$41 N$42 "Straight Waveguide" sch_x=3 sch_y=5.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W22 N$43 N$44 "Straight Waveguide" sch_x=5 sch_y=5.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W23 N$45 N$46 "Straight Waveguide" sch_x=5 sch_y=6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W24 N$47 N$48 "Straight Waveguide" sch_x=4 sch_y=4.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W25 N$49 N$50 "Straight Waveguide" sch_x=-4 sch_y=3.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W26 N$51 N$52 "Straight Waveguide" sch_x=-5 sch_y=2.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W27 N$53 N$54 "Straight Waveguide" sch_x=-5 sch_y=1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W28 N$55 N$56 "Straight Waveguide" sch_x=-3 sch_y=2.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W29 N$57 N$58 "Straight Waveguide" sch_x=-3 sch_y=1.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W30 N$59 N$60 "Straight Waveguide" sch_x=-4 sch_y=0.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W31 N$61 N$62 "Straight Waveguide" sch_x=0 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W32 N$63 N$64 "Straight Waveguide" sch_x=-1 sch_y=3.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W33 N$65 N$66 "Straight Waveguide" sch_x=-1 sch_y=2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W34 N$67 N$68 "Straight Waveguide" sch_x=1 sch_y=2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W35 N$69 N$70 "Straight Waveguide" sch_x=1 sch_y=3.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W36 N$71 N$72 "Straight Waveguide" sch_x=0 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W37 N$73 N$74 "Straight Waveguide" sch_x=0 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W38 N$75 N$76 "Straight Waveguide" sch_x=-1 sch_y=1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W39 N$77 N$78 "Straight Waveguide" sch_x=-1 sch_y=0.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W40 N$79 N$80 "Straight Waveguide" sch_x=1 sch_y=0.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W41 N$81 N$82 "Straight Waveguide" sch_x=1 sch_y=1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W42 N$83 N$84 "Straight Waveguide" sch_x=0 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W43 N$85 N$86 "Straight Waveguide" sch_x=4 sch_y=3.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W44 N$87 N$88 "Straight Waveguide" sch_x=3 sch_y=2.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W45 N$89 N$90 "Straight Waveguide" sch_x=3 sch_y=1.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W46 N$91 N$92 "Straight Waveguide" sch_x=5 sch_y=1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W47 N$93 N$94 "Straight Waveguide" sch_x=5 sch_y=2.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W48 N$95 N$96 "Straight Waveguide" sch_x=4 sch_y=0.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W49 N$98 N$97 "Straight Waveguide" sch_x=-13 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W50 N$100 N$99 "Straight Waveguide" sch_x=-13 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W51 N$102 N$101 "Straight Waveguide" sch_x=-13 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W52 N$104 N$103 "Straight Waveguide" sch_x=-13 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W53 N$106 N$105 "Straight Waveguide" sch_x=-13 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W54 N$108 N$107 "Straight Waveguide" sch_x=-13 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W55 N$110 N$109 "Straight Waveguide" sch_x=-11 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W56 N$112 N$111 "Straight Waveguide" sch_x=-11 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W57 N$114 N$113 "Straight Waveguide" sch_x=-11 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W58 N$116 N$115 "Straight Waveguide" sch_x=-11 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W59 N$118 N$117 "Straight Waveguide" sch_x=-9 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W60 N$120 N$119 "Straight Waveguide" sch_x=-9 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W61 N$121 N$122 "Straight Waveguide" sch_x=-9 sch_y=6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W62 N$123 N$124 "Straight Waveguide" sch_x=-8 sch_y=5.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W63 N$125 N$126 "Straight Waveguide" sch_x=-7 sch_y=4.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W64 N$127 N$128 "Straight Waveguide" sch_x=-7 sch_y=3.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W65 N$129 N$130 "Straight Waveguide" sch_x=-8 sch_y=2.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W66 N$131 N$132 "Straight Waveguide" sch_x=-9 sch_y=1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W67 N$133 N$134 "Straight Waveguide" sch_x=-10 sch_y=6.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W68 N$135 N$136 "Straight Waveguide" sch_x=-10 sch_y=1.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W69 N$137 N$138 "Straight Waveguide" sch_x=13 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W70 N$139 N$140 "Straight Waveguide" sch_x=13 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W71 N$141 N$142 "Straight Waveguide" sch_x=13 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W72 N$143 N$144 "Straight Waveguide" sch_x=13 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W73 N$145 N$146 "Straight Waveguide" sch_x=13 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W74 N$147 N$148 "Straight Waveguide" sch_x=13 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W75 N$149 N$150 "Straight Waveguide" sch_x=11 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W76 N$151 N$152 "Straight Waveguide" sch_x=11 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W77 N$153 N$154 "Straight Waveguide" sch_x=11 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W78 N$155 N$156 "Straight Waveguide" sch_x=11 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W79 N$157 N$158 "Straight Waveguide" sch_x=9 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W80 N$159 N$160 "Straight Waveguide" sch_x=9 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W81 N$162 N$161 "Straight Waveguide" sch_x=9 sch_y=6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W82 N$164 N$163 "Straight Waveguide" sch_x=8 sch_y=5.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W83 N$166 N$165 "Straight Waveguide" sch_x=7 sch_y=4.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W84 N$168 N$167 "Straight Waveguide" sch_x=7 sch_y=3.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W85 N$170 N$169 "Straight Waveguide" sch_x=8 sch_y=2.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W86 N$172 N$171 "Straight Waveguide" sch_x=9 sch_y=1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W87 N$174 N$173 "Straight Waveguide" sch_x=10 sch_y=6.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W88 N$176 N$175 "Straight Waveguide" sch_x=10 sch_y=1.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W89 N$177 N$178 "Straight Waveguide" sch_x=-4 sch_y=-0.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W90 N$179 N$180 "Straight Waveguide" sch_x=-5 sch_y=-1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W91 N$181 N$182 "Straight Waveguide" sch_x=-5 sch_y=-2.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W92 N$183 N$184 "Straight Waveguide" sch_x=-3 sch_y=-1.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W93 N$185 N$186 "Straight Waveguide" sch_x=-3 sch_y=-2.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W94 N$187 N$188 "Straight Waveguide" sch_x=-4 sch_y=-3.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W95 N$189 N$190 "Straight Waveguide" sch_x=0 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W96 N$191 N$192 "Straight Waveguide" sch_x=-1 sch_y=-0.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W97 N$193 N$194 "Straight Waveguide" sch_x=-1 sch_y=-1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W98 N$195 N$196 "Straight Waveguide" sch_x=1 sch_y=-1.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W99 N$197 N$198 "Straight Waveguide" sch_x=1 sch_y=-0.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W100 N$199 N$200 "Straight Waveguide" sch_x=0 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W101 N$201 N$202 "Straight Waveguide" sch_x=0 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W102 N$203 N$204 "Straight Waveguide" sch_x=-1 sch_y=-2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W103 N$205 N$206 "Straight Waveguide" sch_x=-1 sch_y=-3.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W104 N$207 N$208 "Straight Waveguide" sch_x=1 sch_y=-3.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W105 N$209 N$210 "Straight Waveguide" sch_x=1 sch_y=-2.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W106 N$211 N$212 "Straight Waveguide" sch_x=0 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W107 N$213 N$214 "Straight Waveguide" sch_x=4 sch_y=-0.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W108 N$215 N$216 "Straight Waveguide" sch_x=3 sch_y=-1.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W109 N$217 N$218 "Straight Waveguide" sch_x=3 sch_y=-2.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W110 N$219 N$220 "Straight Waveguide" sch_x=5 sch_y=-2.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W111 N$221 N$222 "Straight Waveguide" sch_x=5 sch_y=-1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W112 N$223 N$224 "Straight Waveguide" sch_x=4 sch_y=-3.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W113 N$225 N$226 "Straight Waveguide" sch_x=-4 sch_y=-4.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W114 N$227 N$228 "Straight Waveguide" sch_x=-5 sch_y=-5.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W115 N$229 N$230 "Straight Waveguide" sch_x=-5 sch_y=-6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W116 N$231 N$232 "Straight Waveguide" sch_x=-3 sch_y=-5.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W117 N$233 N$234 "Straight Waveguide" sch_x=-3 sch_y=-6.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W118 N$235 N$236 "Straight Waveguide" sch_x=-4 sch_y=-7.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W119 N$237 N$238 "Straight Waveguide" sch_x=0 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W120 N$239 N$240 "Straight Waveguide" sch_x=-1 sch_y=-4.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W121 N$241 N$242 "Straight Waveguide" sch_x=-1 sch_y=-5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W122 N$243 N$244 "Straight Waveguide" sch_x=1 sch_y=-5.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W123 N$245 N$246 "Straight Waveguide" sch_x=1 sch_y=-4.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W124 N$247 N$248 "Straight Waveguide" sch_x=0 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W125 N$249 N$250 "Straight Waveguide" sch_x=0 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W126 N$251 N$252 "Straight Waveguide" sch_x=-1 sch_y=-6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W127 N$253 N$254 "Straight Waveguide" sch_x=-1 sch_y=-7.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W128 N$255 N$256 "Straight Waveguide" sch_x=1 sch_y=-7.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W129 N$257 N$258 "Straight Waveguide" sch_x=1 sch_y=-6.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W130 N$259 N$260 "Straight Waveguide" sch_x=0 sch_y=-7.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W131 N$261 N$262 "Straight Waveguide" sch_x=4 sch_y=-4.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W132 N$263 N$264 "Straight Waveguide" sch_x=3 sch_y=-5.75 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W133 N$265 N$266 "Straight Waveguide" sch_x=3 sch_y=-6.25 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W134 N$267 N$268 "Straight Waveguide" sch_x=5 sch_y=-6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W135 N$269 N$270 "Straight Waveguide" sch_x=5 sch_y=-5.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W136 N$271 N$272 "Straight Waveguide" sch_x=4 sch_y=-7.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W137 N$274 N$273 "Straight Waveguide" sch_x=-13 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W138 N$276 N$275 "Straight Waveguide" sch_x=-13 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W139 N$278 N$277 "Straight Waveguide" sch_x=-13 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W140 N$280 N$279 "Straight Waveguide" sch_x=-13 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W141 N$282 N$281 "Straight Waveguide" sch_x=-13 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W142 N$284 N$283 "Straight Waveguide" sch_x=-13 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W143 N$286 N$285 "Straight Waveguide" sch_x=-11 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W144 N$288 N$287 "Straight Waveguide" sch_x=-11 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W145 N$290 N$289 "Straight Waveguide" sch_x=-11 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W146 N$292 N$291 "Straight Waveguide" sch_x=-11 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W147 N$294 N$293 "Straight Waveguide" sch_x=-9 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W148 N$296 N$295 "Straight Waveguide" sch_x=-9 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W149 N$297 N$298 "Straight Waveguide" sch_x=-9 sch_y=-1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W150 N$299 N$300 "Straight Waveguide" sch_x=-8 sch_y=-2.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W151 N$301 N$302 "Straight Waveguide" sch_x=-7 sch_y=-3.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W152 N$303 N$304 "Straight Waveguide" sch_x=-7 sch_y=-4.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W153 N$305 N$306 "Straight Waveguide" sch_x=-8 sch_y=-5.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W154 N$307 N$308 "Straight Waveguide" sch_x=-9 sch_y=-6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W155 N$309 N$310 "Straight Waveguide" sch_x=-10 sch_y=-1.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W156 N$311 N$312 "Straight Waveguide" sch_x=-10 sch_y=-6.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W157 N$313 N$314 "Straight Waveguide" sch_x=13 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W158 N$315 N$316 "Straight Waveguide" sch_x=13 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W159 N$317 N$318 "Straight Waveguide" sch_x=13 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W160 N$319 N$320 "Straight Waveguide" sch_x=13 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W161 N$321 N$322 "Straight Waveguide" sch_x=13 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W162 N$323 N$324 "Straight Waveguide" sch_x=13 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W163 N$325 N$326 "Straight Waveguide" sch_x=11 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W164 N$327 N$328 "Straight Waveguide" sch_x=11 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W165 N$329 N$330 "Straight Waveguide" sch_x=11 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W166 N$331 N$332 "Straight Waveguide" sch_x=11 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W167 N$333 N$334 "Straight Waveguide" sch_x=9 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W168 N$335 N$336 "Straight Waveguide" sch_x=9 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W169 N$338 N$337 "Straight Waveguide" sch_x=9 sch_y=-1.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W170 N$340 N$339 "Straight Waveguide" sch_x=8 sch_y=-2.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W171 N$342 N$341 "Straight Waveguide" sch_x=7 sch_y=-3.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W172 N$344 N$343 "Straight Waveguide" sch_x=7 sch_y=-4.625 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W173 N$346 N$345 "Straight Waveguide" sch_x=8 sch_y=-5.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W174 N$348 N$347 "Straight Waveguide" sch_x=9 sch_y=-6.375 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W175 N$350 N$349 "Straight Waveguide" sch_x=10 sch_y=-1.125 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W176 N$352 N$351 "Straight Waveguide" sch_x=10 sch_y=-6.875 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W177 N$354 N$353 "Straight Waveguide" sch_x=-29 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W178 N$356 N$355 "Straight Waveguide" sch_x=-29 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W179 N$358 N$357 "Straight Waveguide" sch_x=-29 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W180 N$360 N$359 "Straight Waveguide" sch_x=-29 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W181 N$362 N$361 "Straight Waveguide" sch_x=-29 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W182 N$364 N$363 "Straight Waveguide" sch_x=-29 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W183 N$366 N$365 "Straight Waveguide" sch_x=-29 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W184 N$368 N$367 "Straight Waveguide" sch_x=-29 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W185 N$370 N$369 "Straight Waveguide" sch_x=-29 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W186 N$372 N$371 "Straight Waveguide" sch_x=-29 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W187 N$374 N$373 "Straight Waveguide" sch_x=-29 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W188 N$376 N$375 "Straight Waveguide" sch_x=-29 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W189 N$378 N$377 "Straight Waveguide" sch_x=-29 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W190 N$380 N$379 "Straight Waveguide" sch_x=-29 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W191 N$382 N$381 "Straight Waveguide" sch_x=-27 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W192 N$384 N$383 "Straight Waveguide" sch_x=-27 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W193 N$386 N$385 "Straight Waveguide" sch_x=-27 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W194 N$388 N$387 "Straight Waveguide" sch_x=-27 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W195 N$390 N$389 "Straight Waveguide" sch_x=-27 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W196 N$392 N$391 "Straight Waveguide" sch_x=-27 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W197 N$394 N$393 "Straight Waveguide" sch_x=-27 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W198 N$396 N$395 "Straight Waveguide" sch_x=-27 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W199 N$398 N$397 "Straight Waveguide" sch_x=-27 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W200 N$400 N$399 "Straight Waveguide" sch_x=-27 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W201 N$402 N$401 "Straight Waveguide" sch_x=-27 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W202 N$404 N$403 "Straight Waveguide" sch_x=-27 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W203 N$406 N$405 "Straight Waveguide" sch_x=-25 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W204 N$408 N$407 "Straight Waveguide" sch_x=-25 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W205 N$410 N$409 "Straight Waveguide" sch_x=-25 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W206 N$412 N$411 "Straight Waveguide" sch_x=-25 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W207 N$414 N$413 "Straight Waveguide" sch_x=-25 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W208 N$416 N$415 "Straight Waveguide" sch_x=-25 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W209 N$418 N$417 "Straight Waveguide" sch_x=-25 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W210 N$420 N$419 "Straight Waveguide" sch_x=-25 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W211 N$422 N$421 "Straight Waveguide" sch_x=-25 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W212 N$424 N$423 "Straight Waveguide" sch_x=-25 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W213 N$426 N$425 "Straight Waveguide" sch_x=-23 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W214 N$428 N$427 "Straight Waveguide" sch_x=-23 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W215 N$430 N$429 "Straight Waveguide" sch_x=-23 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W216 N$432 N$431 "Straight Waveguide" sch_x=-23 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W217 N$434 N$433 "Straight Waveguide" sch_x=-23 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W218 N$436 N$435 "Straight Waveguide" sch_x=-23 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W219 N$438 N$437 "Straight Waveguide" sch_x=-23 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W220 N$440 N$439 "Straight Waveguide" sch_x=-23 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W221 N$442 N$441 "Straight Waveguide" sch_x=-21 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W222 N$444 N$443 "Straight Waveguide" sch_x=-21 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W223 N$446 N$445 "Straight Waveguide" sch_x=-21 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W224 N$448 N$447 "Straight Waveguide" sch_x=-21 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W225 N$450 N$449 "Straight Waveguide" sch_x=-21 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W226 N$452 N$451 "Straight Waveguide" sch_x=-21 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W227 N$454 N$453 "Straight Waveguide" sch_x=-19 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W228 N$456 N$455 "Straight Waveguide" sch_x=-19 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W229 N$458 N$457 "Straight Waveguide" sch_x=-19 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W230 N$460 N$459 "Straight Waveguide" sch_x=-19 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W231 N$462 N$461 "Straight Waveguide" sch_x=-17 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W232 N$464 N$463 "Straight Waveguide" sch_x=-17 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W233 N$465 N$466 "Straight Waveguide" sch_x=-21 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W234 N$467 N$468 "Straight Waveguide" sch_x=-20 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W235 N$469 N$470 "Straight Waveguide" sch_x=-19 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W236 N$471 N$472 "Straight Waveguide" sch_x=-18 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W237 N$473 N$474 "Straight Waveguide" sch_x=-17 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W238 N$475 N$476 "Straight Waveguide" sch_x=-16 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W239 N$477 N$478 "Straight Waveguide" sch_x=-15 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W240 N$479 N$480 "Straight Waveguide" sch_x=-15 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W241 N$481 N$482 "Straight Waveguide" sch_x=-16 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W242 N$483 N$484 "Straight Waveguide" sch_x=-17 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W243 N$485 N$486 "Straight Waveguide" sch_x=-18 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W244 N$487 N$488 "Straight Waveguide" sch_x=-19 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W245 N$489 N$490 "Straight Waveguide" sch_x=-20 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W246 N$491 N$492 "Straight Waveguide" sch_x=-21 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W247 N$493 N$494 "Straight Waveguide" sch_x=-22 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W248 N$495 N$496 "Straight Waveguide" sch_x=-22 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W249 N$497 N$498 "Straight Waveguide" sch_x=29 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W250 N$499 N$500 "Straight Waveguide" sch_x=29 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W251 N$501 N$502 "Straight Waveguide" sch_x=29 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W252 N$503 N$504 "Straight Waveguide" sch_x=29 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W253 N$505 N$506 "Straight Waveguide" sch_x=29 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W254 N$507 N$508 "Straight Waveguide" sch_x=29 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W255 N$509 N$510 "Straight Waveguide" sch_x=29 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W256 N$511 N$512 "Straight Waveguide" sch_x=29 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W257 N$513 N$514 "Straight Waveguide" sch_x=29 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W258 N$515 N$516 "Straight Waveguide" sch_x=29 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W259 N$517 N$518 "Straight Waveguide" sch_x=29 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W260 N$519 N$520 "Straight Waveguide" sch_x=29 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W261 N$521 N$522 "Straight Waveguide" sch_x=29 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W262 N$523 N$524 "Straight Waveguide" sch_x=29 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W263 N$525 N$526 "Straight Waveguide" sch_x=27 sch_y=5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W264 N$527 N$528 "Straight Waveguide" sch_x=27 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W265 N$529 N$530 "Straight Waveguide" sch_x=27 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W266 N$531 N$532 "Straight Waveguide" sch_x=27 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W267 N$533 N$534 "Straight Waveguide" sch_x=27 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W268 N$535 N$536 "Straight Waveguide" sch_x=27 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W269 N$537 N$538 "Straight Waveguide" sch_x=27 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W270 N$539 N$540 "Straight Waveguide" sch_x=27 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W271 N$541 N$542 "Straight Waveguide" sch_x=27 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W272 N$543 N$544 "Straight Waveguide" sch_x=27 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W273 N$545 N$546 "Straight Waveguide" sch_x=27 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W274 N$547 N$548 "Straight Waveguide" sch_x=27 sch_y=-5.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W275 N$549 N$550 "Straight Waveguide" sch_x=25 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W276 N$551 N$552 "Straight Waveguide" sch_x=25 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W277 N$553 N$554 "Straight Waveguide" sch_x=25 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W278 N$555 N$556 "Straight Waveguide" sch_x=25 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W279 N$557 N$558 "Straight Waveguide" sch_x=25 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W280 N$559 N$560 "Straight Waveguide" sch_x=25 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W281 N$561 N$562 "Straight Waveguide" sch_x=25 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W282 N$563 N$564 "Straight Waveguide" sch_x=25 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W283 N$565 N$566 "Straight Waveguide" sch_x=25 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W284 N$567 N$568 "Straight Waveguide" sch_x=25 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W285 N$569 N$570 "Straight Waveguide" sch_x=23 sch_y=3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W286 N$571 N$572 "Straight Waveguide" sch_x=23 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W287 N$573 N$574 "Straight Waveguide" sch_x=23 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W288 N$575 N$576 "Straight Waveguide" sch_x=23 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W289 N$577 N$578 "Straight Waveguide" sch_x=23 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W290 N$579 N$580 "Straight Waveguide" sch_x=23 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W291 N$581 N$582 "Straight Waveguide" sch_x=23 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W292 N$583 N$584 "Straight Waveguide" sch_x=23 sch_y=-3.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W293 N$585 N$586 "Straight Waveguide" sch_x=21 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W294 N$587 N$588 "Straight Waveguide" sch_x=21 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W295 N$589 N$590 "Straight Waveguide" sch_x=21 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W296 N$591 N$592 "Straight Waveguide" sch_x=21 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W297 N$593 N$594 "Straight Waveguide" sch_x=21 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W298 N$595 N$596 "Straight Waveguide" sch_x=21 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W299 N$597 N$598 "Straight Waveguide" sch_x=19 sch_y=1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W300 N$599 N$600 "Straight Waveguide" sch_x=19 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W301 N$601 N$602 "Straight Waveguide" sch_x=19 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W302 N$603 N$604 "Straight Waveguide" sch_x=19 sch_y=-1.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W303 N$605 N$606 "Straight Waveguide" sch_x=17 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W304 N$607 N$608 "Straight Waveguide" sch_x=17 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W305 N$610 N$609 "Straight Waveguide" sch_x=21 sch_y=6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W306 N$612 N$611 "Straight Waveguide" sch_x=20 sch_y=5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W307 N$614 N$613 "Straight Waveguide" sch_x=19 sch_y=4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W308 N$616 N$615 "Straight Waveguide" sch_x=18 sch_y=3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W309 N$618 N$617 "Straight Waveguide" sch_x=17 sch_y=2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W310 N$620 N$619 "Straight Waveguide" sch_x=16 sch_y=1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W311 N$622 N$621 "Straight Waveguide" sch_x=15 sch_y=0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W312 N$624 N$623 "Straight Waveguide" sch_x=15 sch_y=-0.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W313 N$626 N$625 "Straight Waveguide" sch_x=16 sch_y=-1 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W314 N$628 N$627 "Straight Waveguide" sch_x=17 sch_y=-2.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W315 N$630 N$629 "Straight Waveguide" sch_x=18 sch_y=-3 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W316 N$632 N$631 "Straight Waveguide" sch_x=19 sch_y=-4.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W317 N$634 N$633 "Straight Waveguide" sch_x=20 sch_y=-5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W318 N$636 N$635 "Straight Waveguide" sch_x=21 sch_y=-6.5 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W319 N$638 N$637 "Straight Waveguide" sch_x=22 sch_y=7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+   W320 N$640 N$639 "Straight Waveguide" sch_x=22 sch_y=-7 sch_r=0 sch_f=false lay_x=0 lay_y=0
+.ends HDBE
+* - ONA
+.ona input_unit=wavelength input_parameter=center_and_range center=1550e-9
+  + range=100e-9 number_of_points=100 
+  + minimum_loss=200
+  + sensitivity=-200 
+  + analysis_type=scattering_data
+  + multithreading=user_defined number_of_threads=1 
+ + input(1)=HDBE,N$689
++ input(2)=HDBE,N$691
++ input(3)=HDBE,N$693
++ input(4)=HDBE,N$695
++ input(5)=HDBE,N$697
++ input(6)=HDBE,N$699
++ input(7)=HDBE,N$701
++ input(8)=HDBE,N$703
+  + output=HDBE,N$641
+
+HDBE  N$641 N$643 N$645 N$647 N$649 N$651 N$653 N$655 N$689 N$691 N$693 N$695 N$697 N$699 N$701 N$703 HDBE sch_x=0 sch_y=0
+*
+.end
